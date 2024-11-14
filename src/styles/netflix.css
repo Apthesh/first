@@ -1,0 +1,145 @@
+/* Netflix Main App Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.netflix-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.netflix-header.scrolled {
+  background: #141414;
+}
+
+.netflix-logo svg {
+  width: 92px;
+  height: 25px;
+  fill: #e50914;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #b3b3b3;
+}
+
+.hero-section {
+  height: 80vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?q=80&w=2031&auto=format&fit=crop') center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.hero-content {
+  max-width: 640px;
+  color: white;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.content-row {
+  padding: 40px 60px;
+  background: #141414;
+}
+
+.row-header {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content-slider {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.content-card {
+  flex: 0 0 auto;
+  width: 240px;
+  height: 135px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.content-card:hover {
+  transform: scale(1.05);
+}
+
+.content-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-dropdown {
+  position: relative;
+  margin-left: 20px;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #333;
+  padding: 10px 0;
+  min-width: 200px;
+  display: none;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
